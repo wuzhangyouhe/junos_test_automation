@@ -3,7 +3,12 @@
 ```
 sudo pip install junos-eznc
 ```
+## The automation script consists of configuration templates and status sensors
+Please refer to the Juniper offical link for templates creation and sensors op table/view definition.
 
+https://www.juniper.net/documentation/en_US/junos-pyez/topics/task/program/junos-pyez-tables-op-defining.html
+
+https://www.juniper.net/documentation/en_US/junos-pyez/topics/task/program/junos-pyez-program-configuration-data-loading.html
 ********************************************************************************
 Copyright (c) 2019 Juniper Networks. All Rights Reserved.
 

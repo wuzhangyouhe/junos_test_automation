@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+* Author : Juniper Networks Advanced Services
+* Version : v1.0
+* Platform : MX series
+* JUNOS Release : 17.1 and above
+* Description : The script is based on PyEZ for JUNOS SQT automation
+*
+* Revision History:
+* 1.0 04/05/2019 - initial Beta version, Author: LIU Tao
+*
+"""
+#!/usr/bin/python3
+
 from jnpr.junos.utils.config import Config
 from jnpr.junos import Device
 import configuring.templates.l2vpn_config_vars_local as define_vars

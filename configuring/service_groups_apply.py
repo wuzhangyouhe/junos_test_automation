@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+* Author : Juniper Networks Advanced Services
+* Version : v1.0
+* Platform : MX series
+* JUNOS Release : 17.1 and above
+* Description : The script is based on PyEZ for JUNOS SQT automation
+*
+* Revision History:
+* 1.0 04/05/2019 - initial Beta version, Author: LIU Tao
+*
+"""
+#!/usr/bin/python3
+
 from jnpr.junos import Device
 from jnpr.junos.utils.config import Config
 from jnpr.junos.exception import ConnectError

@@ -1,0 +1,27 @@
+### ------------------------------------------------------
+### show l2vpn connections
+### ------------------------------------------------------
+
+
+---
+L2vpnConnectionTable:
+    rpc: get-l2vpn-connection-information
+    item: instance/reference-site
+    key:
+      - ancestor::instance/reference-site/local-site-id
+      - connection/connection-status
+      - connection/local-interface/interface-name
+      - connection/remote-pe
+    view: L2vpnConnectionView
+
+L2vpnConnectionView:
+    fields:
+        connection_id: connection-id
+        connection_type: connection-type
+        connection_status: connection-status
+        last_change: last-change
+        remote_pe: remote-pe
+        control_word: control-word
+        inbound_label: inbound-label
+        outbound_label: outbound-label
+

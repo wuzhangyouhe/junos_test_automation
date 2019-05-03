@@ -12,7 +12,6 @@
 """
 #!/usr/bin/python3
 
-
 from jnpr.junos import Device
 from jnpr.junos.factory.factory_loader import FactoryLoader
 import yaml

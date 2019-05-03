@@ -43,7 +43,7 @@ Layer2_vpn_status = '''\n
 Configuration provisioning completed on Layer 2 VPN services !
 Starting to check the status of all Layer 2 VPN services ... ...\n'''
 cl.check_l2vpn(local_hostname,junos_username,junos_password)
-
+cl.check_l2vpn(remote_hostname,junos_username,junos_password)
 
 
 

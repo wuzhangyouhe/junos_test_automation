@@ -16,7 +16,7 @@ from jnpr.junos.utils.config import Config
 from jnpr.junos import Device
 import configuring.templates.l2vpn_config_vars_local as define_vars
 
-def conf_l2vpn_servic_local(hostname, username, password, interface):
+def conf_l2vpn_service_local(hostname, username, password, interface):
     conf_file = "configuring/templates/l2vpn-service-local.conf"
     current_dict = define_vars.config_vars
 

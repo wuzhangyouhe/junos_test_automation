@@ -35,8 +35,8 @@ And apply the Layer 2 VPN service group on the routers as well.
 '''
 print(Layer2_vpn)
 l2vpn_group = 'set apply-groups L2vpn-services'
-l2vpn_local.conf_l2vpn_servic_local(local_hostname, junos_username, junos_password, local_pe_interface)
-l2vpn_remote.conf_l2vpn_servic_remote(remote_hostname, junos_username, junos_password, remote_pe_interface)
+l2vpn_local.conf_l2vpn_service_local(local_hostname, junos_username, junos_password, local_pe_interface)
+l2vpn_remote.conf_l2vpn_service_remote(remote_hostname, junos_username, junos_password, remote_pe_interface)
 group_apply.groups_apply_by_cli(local_hostname,junos_username,junos_password,l2vpn_group)
 group_apply.groups_apply_by_cli(remote_hostname,junos_username,junos_password,l2vpn_group)
 Layer2_vpn_status = '''\n
@@ -44,7 +44,6 @@ Configuration provisioning completed on Layer 2 VPN services !
 Starting to check the status of all Layer 2 VPN services ... ...\n'''
 cl.check_l2vpn(local_hostname,junos_username,junos_password)
 cl.check_l2vpn(remote_hostname,junos_username,junos_password)
-
 
 
 

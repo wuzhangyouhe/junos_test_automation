@@ -21,6 +21,7 @@ def check_l2circuit(router_name, username, password):
     with open("checking/sensors/l2circuit_sensor.yml", 'r') as tvs:
         globals().update(FactoryLoader().load(yaml.load(tvs)))
     with Device(host=router_name, user=username, password=password, gather_facts=False) as dev:
+        print(dev.facts['hostname'])
         l2circuit = L2CircuitConnectionTable(dev)
         l2circuit.get()
         for item in l2circuit:

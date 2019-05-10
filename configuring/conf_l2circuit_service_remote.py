@@ -21,7 +21,7 @@ import re
 def conf_l2circuit_service_remote(hostname, remotehost,username, password, interface):
     conf_file = "configuring/templates/l2circuit-service-remote.conf"
     current_dict = define_vars.config_vars
-    
+
     def replace_value_with_definition(key_to_find, definition):
         for key in current_dict.keys():
             if key == key_to_find:

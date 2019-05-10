@@ -10,6 +10,9 @@ L2CircuitConnectionTable:
   key:
     - ancestor::l2circuit-neighbor/neighbor-address
     - connection-id
+    - connection-status
+#    - inbound-label
+#    - outbound-label
   view: L2CircuitConnectionView
 
 L2CircuitConnectionView:

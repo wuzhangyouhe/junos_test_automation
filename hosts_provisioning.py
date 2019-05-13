@@ -18,35 +18,46 @@ import configuring.conf_l2vpn_service_local as l2vpn_local
 import configuring.conf_l2vpn_service_remote as l2vpn_remote
 import configuring.conf_l2circuit_service_local as l2circuit_local
 import configuring.conf_l2circuit_service_remote as l2circuit_remote
+import configuring.conf_l3vpn_service_pe1 as l3vpn_pe1
+import configuring.conf_l3vpn_service_pe2 as l3vpn_pe2
+import configuring.conf_l3vpn_service_pe3 as l3vpn_pe3
 import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
 
-local_hostname = input("Local PE's Hostname: ")
-remote_hostname = input("Remote PE's Hostname: ")
+pe1_hostname = '172.16.99.34' #input(" PE1 Hostname: ")
+pe2_hostname = '172.16.99.87' #input(" PE2 Hostname: ")
+pe3_hostname = '172.16.99.71' #input(" PE3 Hostname: ")
 junos_username = input("Junos device username: ")
 junos_password = getpass("Junos device password: ")
+# local_hostname = input("Local PE's Hostname: ")
+# remote_hostname = input("Remote PE's Hostname: ")
 # local_pe_interface = input("Local PE's Interface : ")
 # remote_pe_interface = input("Remote PE's Interface : ")
 local_pe_interface = 'ge-2/3/8'
 remote_pe_interface = 'xe-2/0/2'
+pe1_interface = 'ge-2/3/8'
+pe1_ce_interface = 'ge-2/3/9'
+pe2_interface = 'xe-2/0/2'
+pe2_ce_interface = 'xe-2/0/3'
+pe3_interface = 'ge-5/1/2'
+pe3_ce_interface = 'ge-5/1/3'
 
-def l2vpn_service():
-    Layer2_vpn='''
-    * Provisioning Layer 2 VPN on local PE and remote PE under groups of L2vpn-services ;
-    * And apply the Layer 2 VPN service group on the routers as well.
+def clean_all_services():
+    print("\n Clean up all services from provisioning tool ... ")
+    rm_all_services = '''
+    delete apply-groups L2circuit-services
+    delete groups L2circuit-services
+    delete apply-groups L2vpn-services
+    delete groups L2vpn-services
+    delete apply-groups L3vpn-services
+    delete groups L3vpn-services
     '''
-    print(Layer2_vpn)
-    l2vpn_group = 'set apply-groups L2vpn-services'
-    l2vpn_local.conf_l2vpn_service_local(local_hostname, junos_username, junos_password, local_pe_interface)
-    l2vpn_remote.conf_l2vpn_service_remote(remote_hostname, junos_username, junos_password, remote_pe_interface)
-    group_apply.groups_apply_by_cli(local_hostname,junos_username,junos_password,l2vpn_group)
-    group_apply.groups_apply_by_cli(remote_hostname,junos_username,junos_password,l2vpn_group)
-    Layer2_vpn_status = '''\n
-    * Configuration provisioning completed on Layer 2 VPN services !
-    * Starting to check the status of all Layer 2 VPN services ... ...\n'''
-    cl2.check_l2vpn(local_hostname,junos_username,junos_password)
-    cl2.check_l2vpn(remote_hostname,junos_username,junos_password)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,rm_all_services)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rm_all_services)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,rm_all_services)
+    print("\n Services from provisioning tools are all deleted ! ")
+
 
 def l2circuit_service():
     Layer2_circuit='''
@@ -59,11 +70,53 @@ def l2circuit_service():
     l2circuit_remote.conf_l2circuit_service_remote(remote_hostname,local_hostname, junos_username, junos_password, remote_pe_interface)
     group_apply.groups_apply_by_cli(local_hostname,junos_username,junos_password,l2circuit_group)
     group_apply.groups_apply_by_cli(remote_hostname,junos_username,junos_password,l2circuit_group)
-    Layer2_vpn_status = '''\n
+    print("\n Layer 2 circuit services (vlan id range 10-19) provisioning completed ! ")
+    Layer2_circuit_status = '''\n
     * Configuration provisioning completed on Layer 2 Circuit services !
     * Starting to check the status of all Layer 2 Circuit services ... ...\n'''
+    print(Layer2_circuit_status)
     cc.check_l2circuit(local_hostname,junos_username,junos_password)
     cc.check_l2circuit(remote_hostname,junos_username,junos_password)
 
-l2circuit_service()
-# ci.check_dev_inventory(local_hostname, junos_username, junos_password)
+def l2vpn_service():
+    Layer2_vpn='''
+    * Provisioning Layer 2 VPN on local PE and remote PE under groups of L2vpn-services ;
+    * And apply the Layer 2 VPN service group on the routers as well.
+    '''
+    print(Layer2_vpn)
+    l2vpn_group = 'set apply-groups L2vpn-services'
+    l2vpn_local.conf_l2vpn_service_local(local_hostname, junos_username, junos_password, local_pe_interface)
+    l2vpn_remote.conf_l2vpn_service_remote(remote_hostname, junos_username, junos_password, remote_pe_interface)
+    group_apply.groups_apply_by_cli(local_hostname,junos_username,junos_password,l2vpn_group)
+    group_apply.groups_apply_by_cli(remote_hostname,junos_username,junos_password,l2vpn_group)
+    print("\n Layer 2 VPN services (vlan id range 20-29) provisioning completed ! ")
+    Layer2_vpn_status = '''\n
+    * Configuration provisioning completed on Layer 2 VPN services !
+    * Starting to check the status of all Layer 2 VPN services ... ...\n'''
+    print(Layer2_vpn_status)
+    cl2.check_l2vpn(local_hostname,junos_username,junos_password)
+    cl2.check_l2vpn(remote_hostname,junos_username,junos_password)
+
+def l3vpn_service():
+    Layer3_vpn='''
+    * Provisioning Layer 3 VPN on local PE and remote PE under groups of L3vpn-services ;
+    * And apply the Layer 3 VPN service group on the routers as well.
+    '''
+    print(Layer3_vpn)
+    l3vpn_group = 'set apply-groups L3vpn-services'
+    l3vpn_pe1.conf_l3vpn_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
+    l3vpn_pe2.conf_l3vpn_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
+    l3vpn_pe3.conf_l3vpn_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,l3vpn_group)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,l3vpn_group)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,l3vpn_group)
+    print("\n Layer 3 VPN services (vlan id range 30-39) provisioning completed ! ")
+    # Layer3_vpn_status = '''\n
+    # * Configuration provisioning completed on Layer 2 Circuit services !
+    # * Starting to check the status of all Layer 2 Circuit services ... ...\n'''
+    # print(Layer3_vpn_status)
+    # cc.check_l2circuit(local_hostname,junos_username,junos_password)
+    # cc.check_l2circuit(remote_hostname,junos_username,junos_password)
+
+#clean_all_services()
+l3vpn_service()

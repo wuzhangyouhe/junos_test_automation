@@ -39,7 +39,7 @@ def groups_apply_by_cli(hostname, username, password, cli):
         dev.close()
         return
     try:
-        dev.cu.load(cli, format='set')
+        dev.cu.load(cli, format='set', ignore_warning=True)
         dev.cu.pdiff()
     except (ConfigLoadError, Exception) as err:
         print ("Unable to load configuration changes: {0}".format(err))
@@ -54,9 +54,9 @@ def groups_apply_by_cli(hostname, username, password, cli):
     print("Committing the configuration")
     try:
         dev.cu.commit_check()
-        dev.cu.commit(confirm=2, comment='Apply service group configurations')
+        dev.cu.commit(confirm=1, comment='Apply service group configurations')
         dev.cu.commit(comment='Confirm commit by PyEZ SQT Auto-provisioning Tool.',
-                      timeout=120)
+                      timeout=60)
     except CommitError as err:
         print("Unable to commit configuration: {0}".format(err))
         print("Unlocking the configuration")

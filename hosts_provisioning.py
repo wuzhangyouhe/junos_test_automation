@@ -24,6 +24,9 @@ import configuring.conf_l3vpn_service_pe3 as l3vpn_pe3
 import configuring.conf_vpls_service_pe1 as vpls_pe1
 import configuring.conf_vpls_service_pe2 as vpls_pe2
 import configuring.conf_vpls_service_pe3 as vpls_pe3
+import configuring.conf_ngmvpn_service_pe1 as ngmvpn_pe1
+import configuring.conf_ngmvpn_service_pe2 as ngmvpn_pe2
+import configuring.conf_ngmvpn_service_pe3 as ngmvpn_pe3
 import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
@@ -120,20 +123,36 @@ def l3vpn_service():
     # cc.check_l2circuit(local_hostname,junos_username,junos_password)
     # cc.check_l2circuit(remote_hostname,junos_username,junos_password)
 
-def l3vpn_service():
-    vpls_vpn='''
+def vpls_service():
+    vpls='''
     * Provisioning BGP VPLS on PE1, PE2 and PE3 under groups of Vpls-services ;
     * And apply the VPLS service group on the routers as well.
     '''
-    print(vpls_vpn)
+    print(vpls)
     vpls_group = 'set apply-groups Vpls-services'
-    vpls_pe1.conf_l3vpn_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
-    vpls_pe2.conf_l3vpn_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
-    vpls_pe3.conf_l3vpn_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
+    vpls_pe1.conf_vpls_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
+    vpls_pe2.conf_vpls_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
+    vpls_pe3.conf_vpls_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
     group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,vpls_group)
     group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,vpls_group)
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,vpls_group)
     print("\n VPLS services (vlan id range 40-49) provisioning completed ! ")
+
+def ngmvpn_service():
+    ngmvpn='''
+    * Provisioning BGP NG-MVPN on PE1, PE2 and PE3 under groups of Ngmvpn-services ;
+    * And apply the NG-MVPN service group on the routers as well.
+    '''
+    print(ngmvpn)
+    ngmvpn_group = 'set apply-groups Ngmvpn-services'
+    ngmvpn_pe1.conf_ngmvpn_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
+    ngmvpn_pe2.conf_ngmvpn_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
+    ngmvpn_pe3.conf_ngmvpn_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,ngmvpn_group)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,ngmvpn_group)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,ngmvpn_group)
+    print("\n NG-MVPN services (vlan id range 50-51) provisioning completed ! ")
+
 
 #clean_all_services()
 l3vpn_service()

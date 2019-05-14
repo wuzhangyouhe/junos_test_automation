@@ -21,6 +21,9 @@ import configuring.conf_l2circuit_service_remote as l2circuit_remote
 import configuring.conf_l3vpn_service_pe1 as l3vpn_pe1
 import configuring.conf_l3vpn_service_pe2 as l3vpn_pe2
 import configuring.conf_l3vpn_service_pe3 as l3vpn_pe3
+import configuring.conf_vpls_service_pe1 as vpls_pe1
+import configuring.conf_vpls_service_pe2 as vpls_pe2
+import configuring.conf_vpls_service_pe3 as vpls_pe3
 import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
@@ -57,7 +60,6 @@ def clean_all_services():
     group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rm_all_services)
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,rm_all_services)
     print("\n Services from provisioning tools are all deleted ! ")
-
 
 def l2circuit_service():
     Layer2_circuit='''
@@ -99,7 +101,7 @@ def l2vpn_service():
 
 def l3vpn_service():
     Layer3_vpn='''
-    * Provisioning Layer 3 VPN on local PE and remote PE under groups of L3vpn-services ;
+    * Provisioning Layer 3 VPN on PE1, PE2 and PE3 under groups of L3vpn-services ;
     * And apply the Layer 3 VPN service group on the routers as well.
     '''
     print(Layer3_vpn)
@@ -117,6 +119,21 @@ def l3vpn_service():
     # print(Layer3_vpn_status)
     # cc.check_l2circuit(local_hostname,junos_username,junos_password)
     # cc.check_l2circuit(remote_hostname,junos_username,junos_password)
+
+def l3vpn_service():
+    vpls_vpn='''
+    * Provisioning BGP VPLS on PE1, PE2 and PE3 under groups of Vpls-services ;
+    * And apply the VPLS service group on the routers as well.
+    '''
+    print(vpls_vpn)
+    vpls_group = 'set apply-groups Vpls-services'
+    vpls_pe1.conf_l3vpn_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
+    vpls_pe2.conf_l3vpn_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
+    vpls_pe3.conf_l3vpn_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,vpls_group)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,vpls_group)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,vpls_group)
+    print("\n VPLS services (vlan id range 40-49) provisioning completed ! ")
 
 #clean_all_services()
 l3vpn_service()

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3e01aad-752b-4776-9ae9-b227ee6e37a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn_config_vars_pe1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn_config_vars_pe2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/l3vpn_config_vars_pe3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuring/service_groups_apply.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/service_groups_apply.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hosts_provisioning.py" beforeDir="false" afterPath="$PROJECT_DIR$/hosts_provisioning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,20 +32,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hosts_provisioning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1148">
-              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="376">
+              <caret line="137" column="21" lean-forward="true" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
               <folding>
                 <element signature="e#321#331#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -94,6 +84,13 @@
         <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" />
         <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" />
         <option value="$PROJECT_DIR$/configuring/service_groups_apply.py" />
+        <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py" />
+        <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py" />
+        <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py" />
         <option value="$PROJECT_DIR$/hosts_provisioning.py" />
       </list>
     </option>
@@ -108,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,23 +115,19 @@
             <path>
               <item name="junos_test_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="junos_test_automation" type="462c0819:PsiDirectoryNode" />
-              <item name="checking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="junos_test_automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="junos_test_automation" type="462c0819:PsiDirectoryNode" />
-              <item name="checking" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+              <item name="configuring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="junos_test_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="junos_test_automation" type="462c0819:PsiDirectoryNode" />
               <item name="configuring" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -150,13 +142,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/checking/sensors" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/configuring" />
       <recent name="$PROJECT_DIR$/configuring/templates" />
       <recent name="$PROJECT_DIR$/checking" />
+      <recent name="$PROJECT_DIR$/checking/sensors" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/checking/sensors" />
     </key>
   </component>
@@ -313,22 +305,24 @@
       <workItem from="1557393307565" duration="14000" />
       <workItem from="1557393324731" duration="261000" />
       <workItem from="1557455841439" duration="2760000" />
-      <workItem from="1557730217653" duration="8628000" />
+      <workItem from="1557730217653" duration="9015000" />
+      <workItem from="1557803911878" duration="1922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42581000" />
+    <option name="totallyTimeSpent" value="44890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1630" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2802267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28337532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.65347594" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43529412" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,7 +348,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/junos_test_automation$check_l2circuit.coverage" NAME="check_l2circuit Coverage Results" MODIFIED="1557457541957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checking" />
-    <SUITE FILE_PATH="coverage/junos_test_automation$hosts_provisioning.coverage" NAME="hosts_provisioning Coverage Results" MODIFIED="1557740424785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/junos_test_automation$hosts_provisioning.coverage" NAME="hosts_provisioning Coverage Results" MODIFIED="1557812548026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn_config_vars_remote.py">
@@ -562,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuring/service_groups_apply.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
@@ -576,10 +563,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hosts_provisioning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1148">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="376">
+          <caret line="137" column="21" lean-forward="true" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
           <folding>
             <element signature="e#321#331#0" expanded="true" />
           </folding>

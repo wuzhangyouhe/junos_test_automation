@@ -27,6 +27,9 @@ import configuring.conf_vpls_service_pe3 as vpls_pe3
 import configuring.conf_ngmvpn_service_pe1 as ngmvpn_pe1
 import configuring.conf_ngmvpn_service_pe2 as ngmvpn_pe2
 import configuring.conf_ngmvpn_service_pe3 as ngmvpn_pe3
+import configuring.conf_rosen_service_pe1 as rosen_pe1
+import configuring.conf_rosen_service_pe2 as rosen_pe2
+import configuring.conf_rosen_service_pe3 as rosen_pe3
 import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
@@ -62,6 +65,8 @@ def clean_all_services():
     delete groups Vpls-services
     delete apply-groups Ngmvpn-services
     delete groups Ngmvpn-services
+    delete apply-groups Rosen-services
+    delete groups Rosen-services
     '''
     group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,rm_all_services)
     group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rm_all_services)
@@ -157,6 +162,22 @@ def ngmvpn_service():
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,ngmvpn_group)
     print("\n NG-MVPN services (vlan id range 50-51) provisioning completed ! ")
 
-#clean_all_services()
-vpls_service()
+def rosen_service():
+    rosen='''
+    * Provisioning Rosen on PE1, PE2 and PE3 under groups of Rosen-services ;
+    * And apply the Rosen Multicast service group on the routers as well.
+    '''
+    print(rosen)
+    rosen_group = 'set apply-groups Rosen-services'
+    rosen_pe1.conf_rosen_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
+    rosen_pe2.conf_rosen_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
+    rosen_pe3.conf_rosen_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,rosen_group)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rosen_group)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,rosen_group)
+    print("\n Rosen multicast services (vlan id range 52-53) provisioning completed ! ")
+
+clean_all_services()
+#vpls_service()
 #ngmvpn_service()
+#rosen_service()

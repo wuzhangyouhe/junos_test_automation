@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3e01aad-752b-4776-9ae9-b227ee6e37a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe1.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" beforeDir="false" afterPath="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hosts_provisioning.py" beforeDir="false" afterPath="$PROJECT_DIR$/hosts_provisioning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hosts_provisioning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="521">
+              <caret line="161" column="17" lean-forward="true" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="17" />
               <folding>
                 <element signature="e#321#331#0" expanded="true" />
               </folding>
@@ -42,34 +47,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py">
+        <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-              <folding>
-                <element signature="e#321#363#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="458">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py">
+        <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-              <folding>
-                <element signature="e#321#363#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="325">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf">
+        <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="209">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -113,25 +112,25 @@
         <option value="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe1.py" />
         <option value="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe2.py" />
         <option value="$PROJECT_DIR$/configuring/conf_l3vpn_service_pe3.py" />
-        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" />
         <option value="$PROJECT_DIR$/configuring/service_groups_apply.py" />
         <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py" />
-        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" />
         <option value="$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py" />
+        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe1.py" />
         <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py" />
         <option value="$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py" />
-        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf" />
-        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe1.py" />
         <option value="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe1.py" />
         <option value="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py" />
         <option value="$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py" />
+        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf" />
         <option value="$PROJECT_DIR$/hosts_provisioning.py" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf" />
+        <option value="$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf" />
       </list>
     </option>
   </component>
@@ -351,23 +350,23 @@
       <workItem from="1557393324731" duration="261000" />
       <workItem from="1557455841439" duration="2760000" />
       <workItem from="1557730217653" duration="9015000" />
-      <workItem from="1557803911878" duration="7334000" />
+      <workItem from="1557803911878" duration="7703000" />
+      <workItem from="1557886415203" duration="6469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50302000" />
+    <option name="totallyTimeSpent" value="57140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1630" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28337532" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28652394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2962567" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2962567" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,7 +392,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/junos_test_automation$check_l2circuit.coverage" NAME="check_l2circuit Coverage Results" MODIFIED="1557457541957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/checking" />
-    <SUITE FILE_PATH="coverage/junos_test_automation$hosts_provisioning.coverage" NAME="hosts_provisioning Coverage Results" MODIFIED="1557812548026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/junos_test_automation$hosts_provisioning.coverage" NAME="hosts_provisioning Coverage Results" MODIFIED="1557901223223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn_config_vars_remote.py">
@@ -512,9 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn_config_vars_local.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn_config_vars_pe2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -533,13 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn-service-local.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -580,20 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuring/service_groups_apply.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
@@ -601,95 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe3.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <element signature="e#321#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#321#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#321#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configuring/templates/l2circuit-service-local.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="159" column="29" lean-forward="true" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -706,10 +596,40 @@
     <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn_config_vars_pe3.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding>
+            <element signature="e#321#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#321#363#0" expanded="true" />
           </folding>
@@ -718,35 +638,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="63" lean-forward="true" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#321#363#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configuring/conf_ngmvpn_service_pe3.py">
+    <entry file="file://$PROJECT_DIR$/configuring/conf_vpls_service_pe1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
           <folding>
             <element signature="e#321#363#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe3.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn-service-local.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l2vpn_config_vars_local.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls_config_vars_pe1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe1.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/l3vpn-service-pe2.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe1.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="540">
+          <caret line="171" column="13" lean-forward="true" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe2.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/ngmvpn-service-pe3.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe1.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe2.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configuring/templates/vpls-service-pe3.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hosts_provisioning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="521">
+          <caret line="161" column="17" lean-forward="true" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="17" />
           <folding>
             <element signature="e#321#331#0" expanded="true" />
           </folding>

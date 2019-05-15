@@ -58,6 +58,10 @@ def clean_all_services():
     delete groups L2vpn-services
     delete apply-groups L3vpn-services
     delete groups L3vpn-services
+    delete apply-groups Vpls-services
+    delete groups Vpls-services
+    delete apply-groups Ngmvpn-services
+    delete groups Ngmvpn-services
     '''
     group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,rm_all_services)
     group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rm_all_services)
@@ -153,6 +157,6 @@ def ngmvpn_service():
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,ngmvpn_group)
     print("\n NG-MVPN services (vlan id range 50-51) provisioning completed ! ")
 
-
 #clean_all_services()
-l3vpn_service()
+vpls_service()
+#ngmvpn_service()

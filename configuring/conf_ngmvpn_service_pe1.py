@@ -16,7 +16,7 @@ from jnpr.junos.utils.config import Config
 from jnpr.junos import Device
 import configuring.templates.ngmvpn_config_vars_pe1 as define_vars
 
-def conf_vpls_service_pe1(hostname, username, password, interface, ce_interface):
+def conf_ngmvpn_service_pe1(hostname, username, password, interface, ce_interface):
     conf_file = "configuring/templates/ngmvpn-service-pe1.conf"
     current_dict = define_vars.config_vars
 

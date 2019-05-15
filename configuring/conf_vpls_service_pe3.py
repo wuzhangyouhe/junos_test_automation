@@ -16,7 +16,7 @@ from jnpr.junos.utils.config import Config
 from jnpr.junos import Device
 import configuring.templates.vpls_config_vars_pe3 as define_vars
 
-def conf_vpls_service_pe1(hostname, username, password, interface, ce_interface):
+def conf_vpls_service_pe3(hostname, username, password, interface, ce_interface):
     conf_file = "configuring/templates/vpls-service-pe3.conf"
     current_dict = define_vars.config_vars
 

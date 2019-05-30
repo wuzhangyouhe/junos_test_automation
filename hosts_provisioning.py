@@ -127,11 +127,11 @@ def l3vpn_service():
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,l3vpn_group)
     print("\n Layer 3 VPN services (vlan id range 30-39) provisioning completed ! ")
     Layer3_vpn_status = '''\n
-    * Configuration provisioning completed on Layer 2 Circuit services !
-    * Starting to check the status of all Layer 2 Circuit services ... ...\n'''
+    * Configuration provisioning completed on Layer 3 VPN services !
+    * Starting to check the status of all Layer 3 VPN services ... ...\n'''
     print(Layer3_vpn_status)
-    cc.check_l2circuit(local_hostname,junos_username,junos_password)
-    cc.check_l2circuit(remote_hostname,junos_username,junos_password)
+    # cc.check_l2circuit(local_hostname,junos_username,junos_password)
+    # cc.check_l2circuit(remote_hostname,junos_username,junos_password)
 
 def vpls_service():
     vpls='''
@@ -143,9 +143,9 @@ def vpls_service():
     vpls_pe1.conf_vpls_service_pe1(pe1_hostname, junos_username, junos_password, pe1_interface, pe1_ce_interface)
     vpls_pe2.conf_vpls_service_pe2(pe2_hostname, junos_username, junos_password, pe2_interface, pe2_ce_interface)
     vpls_pe3.conf_vpls_service_pe3(pe3_hostname, junos_username, junos_password, pe3_interface, pe3_ce_interface)
-    # group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,vpls_group)
-    # group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,vpls_group)
-    # group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,vpls_group)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,vpls_group)
+    group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,vpls_group)
+    group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,vpls_group)
     print("\n VPLS services (vlan id range 40-49) provisioning completed ! ")
     vpls_status = '''\n
     * Configuration provisioning completed on VPLS services !
@@ -185,7 +185,10 @@ def rosen_service():
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,rosen_group)
     print("\n Rosen multicast services (vlan id range 52-53) provisioning completed ! ")
 
-#clean_all_services()
-vpls_service()
+clean_all_services()
+#vpls_service()
 #ngmvpn_service()
 #rosen_service()
+l3vpn_service()
+l2vpn_service()
+l2circuit_service()

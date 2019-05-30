@@ -15,14 +15,18 @@
 from jnpr.junos import Device
 from jnpr.junos.factory.factory_loader import FactoryLoader
 import yaml
+from lxml import etree
 
-def check_l2vpn(router_name, username, password):
-
-    with open("checking/sensors/l2vpn_sensor.yml", 'r') as tvs:
+def check_l3vpn(router_name, username, password):
+   #with open("checking/sensors/l3vpn_sensor.yml", 'r') as tvs:
+    with open("sensors/l3vpn_sensor.yml", 'r') as tvs:
         globals().update(FactoryLoader().load(yaml.load(tvs)))
     with Device(host=router_name, user=username, password=password, gather_facts=False) as dev:
         print(dev.facts['hostname'])
-        l2vpn = L2vpnConnectionTable(dev)
-        l2vpn.get()
-        for item in l2vpn:
+        l3vpn = L3vpnRouteTable(dev)
+        l3vpn.get()
+        for item in l3vpn:
             print(item)
+            #print(str(etree.tostring(item)))
+
+check_l3vpn('172.16.99.34','liutao','mx960-123')

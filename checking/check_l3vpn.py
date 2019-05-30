@@ -18,15 +18,16 @@ import yaml
 from lxml import etree
 
 def check_l3vpn(router_name, username, password):
-   #with open("checking/sensors/l3vpn_sensor.yml", 'r') as tvs:
-    with open("sensors/l3vpn_sensor.yml", 'r') as tvs:
+    with open("checking/sensors/l3vpn_sensor.yml", 'r') as tvs:
         globals().update(FactoryLoader().load(yaml.load(tvs)))
     with Device(host=router_name, user=username, password=password, gather_facts=False) as dev:
         print(dev.facts['hostname'])
+        ceBGP = CeRouteTable(dev)
         l3vpn = L3vpnRouteTable(dev)
+        ceBGP.get()
         l3vpn.get()
+        for item in ceBGP:
+            print(item)
         for item in l3vpn:
             print(item)
-            #print(str(etree.tostring(item)))
 
-check_l3vpn('172.16.99.34','liutao','mx960-123')

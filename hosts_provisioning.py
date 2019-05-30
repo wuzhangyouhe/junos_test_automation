@@ -34,6 +34,7 @@ import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
 import checking.check_vpls as cv
+import checking.check_l3vpn as c3
 
 pe1_hostname = '172.16.99.34' #input(" PE1 Hostname: ")
 pe2_hostname = '172.16.99.87' #input(" PE2 Hostname: ")
@@ -130,8 +131,9 @@ def l3vpn_service():
     * Configuration provisioning completed on Layer 3 VPN services !
     * Starting to check the status of all Layer 3 VPN services ... ...\n'''
     print(Layer3_vpn_status)
-    # cc.check_l2circuit(local_hostname,junos_username,junos_password)
-    # cc.check_l2circuit(remote_hostname,junos_username,junos_password)
+    c3.check_l3vpn(pe1_hostname,junos_username,junos_password)
+    c3.check_l3vpn(pe2_hostname,junos_username,junos_password)
+    c3.check_l3vpn(pe3_hostname,junos_username,junos_password)
 
 def vpls_service():
     vpls='''
@@ -190,5 +192,5 @@ clean_all_services()
 #ngmvpn_service()
 #rosen_service()
 l3vpn_service()
-l2vpn_service()
-l2circuit_service()
+# l2vpn_service()
+# l2circuit_service()

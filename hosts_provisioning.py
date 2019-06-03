@@ -41,8 +41,8 @@ pe2_hostname = '172.16.99.87' #input(" PE2 Hostname: ")
 pe3_hostname = '172.16.99.71' #input(" PE3 Hostname: ")
 junos_username = input("Junos device username: ")
 junos_password = getpass("Junos device password: ")
-# local_hostname = input("Local PE's Hostname: ")
-# remote_hostname = input("Remote PE's Hostname: ")
+local_hostname = pe1_hostname
+remote_hostname = pe2_hostname
 # local_pe_interface = input("Local PE's Interface : ")
 # remote_pe_interface = input("Remote PE's Interface : ")
 local_pe_interface = 'ge-2/3/8'
@@ -189,8 +189,8 @@ def rosen_service():
 
 clean_all_services()
 #vpls_service()
-#ngmvpn_service()
+ngmvpn_service()
 #rosen_service()
-l3vpn_service()
+# l3vpn_service()
 # l2vpn_service()
 # l2circuit_service()

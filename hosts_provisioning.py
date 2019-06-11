@@ -30,6 +30,7 @@ import configuring.conf_ngmvpn_service_pe3 as ngmvpn_pe3
 import configuring.conf_rosen_service_pe1 as rosen_pe1
 import configuring.conf_rosen_service_pe2 as rosen_pe2
 import configuring.conf_rosen_service_pe3 as rosen_pe3
+import configuring.conf_nat_service as nat_pe
 import configuring.service_groups_apply as group_apply
 import checking.check_l2vpn as cl2
 import checking.check_l2circuit as cc
@@ -53,6 +54,7 @@ pe2_interface = 'xe-2/0/2'
 pe2_ce_interface = 'xe-2/0/3'
 pe3_interface = 'ge-5/1/2'
 pe3_ce_interface = 'ge-5/1/3'
+ms_interface = 'ms-3/2/0'
 
 def clean_all_services():
     print("\n Clean up all services from provisioning tool ... ")
@@ -69,6 +71,8 @@ def clean_all_services():
     delete groups Ngmvpn-services
     delete apply-groups Rosen-services
     delete groups Rosen-services
+    delete apply-groups Nat-l3vpn-service
+    delete groups Nat-l3vpn-service
     '''
     group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,rm_all_services)
     group_apply.groups_apply_by_cli(pe2_hostname,junos_username,junos_password,rm_all_services)
@@ -187,10 +191,22 @@ def rosen_service():
     group_apply.groups_apply_by_cli(pe3_hostname,junos_username,junos_password,rosen_group)
     print("\n Rosen multicast services (vlan id range 52-53) provisioning completed ! ")
 
-clean_all_services()
+def nat_service():
+    nat='''
+    * Provisioning NAT service on vlan 39 Layer 3 vpn;
+    '''
+    print(nat)
+    nat_group = 'set apply-groups Nat-l3vpn-service'
+    nat_pe.conf_nat_service(pe1_hostname, junos_username, junos_password, pe1_interface, ms_interface)
+    group_apply.groups_apply_by_cli(pe1_hostname,junos_username,junos_password,nat_group)
+    print("\n NAT service is provisioning under Layer 3 vpn vlan 39 completed !")
+
+
+#clean_all_services()
 #vpls_service()
-ngmvpn_service()
+# ngmvpn_service()
 #rosen_service()
-# l3vpn_service()
+#l3vpn_service()
 # l2vpn_service()
 # l2circuit_service()
+nat_service()

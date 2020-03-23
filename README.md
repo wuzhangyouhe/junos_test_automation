@@ -9,6 +9,9 @@ Please refer to the Juniper offical link for templates creation and sensors op t
 https://www.juniper.net/documentation/en_US/junos-pyez/topics/task/program/junos-pyez-tables-op-defining.html
 
 https://www.juniper.net/documentation/en_US/junos-pyez/topics/task/program/junos-pyez-program-configuration-data-loading.html
+## Introduction of the scripts
+![Image](documents/Introduction.png)
+
 ********************************************************************************
 Copyright (c) 2019 Juniper Networks. All Rights Reserved.
 

@@ -202,11 +202,11 @@ def nat_service():
     print("\n NAT service is provisioning under Layer 3 vpn vlan 39 completed !")
 
 
-#clean_all_services()
-#vpls_service()
+clean_all_services()
+# vpls_service()
 # ngmvpn_service()
-#rosen_service()
-#l3vpn_service()
+# rosen_service()
+# l3vpn_service()
 # l2vpn_service()
 # l2circuit_service()
-nat_service()
+# nat_service()
